@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import { orangesRotting } from "../../algorithms/rottenOrange";
 import Cell from "../Cell";
 
+import "./Grid.css";
+
 const ROWS = 10;
 const COLS = 10;
 
@@ -100,21 +102,21 @@ const Grid = () => {
   return (
     <div>
       <button
-        className="startAlgo"
+        className="startAlgoButton"
         onClick={() => launchAlgorithm(grid)}
         disabled={!canClick}
       >
         Launch algorithm
       </button>
       <button
-        className="reset"
+        className="resetButton"
         onClick={() => fillGridWith(0)}
         disabled={!canClick}
       >
         Reset
       </button>
       <button
-        className="fill"
+        className="fillButton"
         onClick={() => fillGridWith(1)}
         disabled={!canClick}
       >
