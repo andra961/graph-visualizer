@@ -1,0 +1,80 @@
+.cell {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 25px;
+  height: 25px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: aqua;
+}
+
+.orange {
+  width: 16px;
+  height: 16px;
+  border-radius: 100%;
+  background-color: orange;
+}
+
+.rotten {
+  width: 16px;
+  height: 16px;
+  border-radius: 100%;
+  background-color: green;
+}
+
+.visited {
+  animation-name: visitedAnimation;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+  animation-delay: 0;
+  animation-direction: alternate;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-play-state: running;
+}
+
+.rotting {
+  animation-name: rottingAnimation;
+  animation-duration: 0.2s;
+  animation-timing-function: ease-out;
+  animation-delay: 0;
+  animation-direction: alternate;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-play-state: running;
+}
+
+@keyframes visitedAnimation {
+  0% {
+    transform: scale(0.3);
+    background-color: rgba(0, 0, 66, 0.75);
+    border-radius: 100%;
+  }
+
+  50% {
+    background-color: rgba(17, 213, 217, 0.75);
+  }
+
+  75% {
+    transform: scale(1.2);
+    background-color: rgba(0, 217, 159, 0.75);
+  }
+
+  90% {
+    transform: scale(1);
+    background-color: rgba(0, 255, 218, 0.75);
+  }
+
+  100% {
+  }
+}
+
+@keyframes rottingAnimation {
+  0% {
+  }
+
+  100% {
+    background-color: green;
+  }
+}
