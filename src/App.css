@@ -1,7 +1,12 @@
 .App {
-  margin-top: 100px;
   width: 100vw;
+  height: 100vh;
   display: flex;
   flex-direction: row;
-  justify-content: center;
+}
+
+@media screen and (max-width: 500px) {
+  .App {
+    flex-direction: column;
+  }
 }

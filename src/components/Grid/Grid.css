@@ -1,27 +1,20 @@
-.startAlgoButton {
+.button {
   cursor: pointer;
   border-radius: 10px;
   background-color: blueviolet;
   border: none;
   color: white;
-  font-weight: 100;
+  font-weight: 300;
   margin-right: 5px;
+  padding: 0px 5px;
 }
-.resetButton {
-  cursor: pointer;
-  border-radius: 10px;
-  background-color: blueviolet;
-  border: none;
-  color: white;
-  font-weight: 100;
-  margin-right: 5px;
+.gridContainer {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
-.fillButton {
-  cursor: pointer;
-  border-radius: 10px;
-  background-color: blueviolet;
-  border: none;
-  color: white;
-  font-weight: 100;
-  margin-right: 5px;
+.gridBox {
+  margin: 0 0;
 }

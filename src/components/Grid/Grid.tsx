@@ -100,53 +100,55 @@ const Grid = () => {
   }, []);
 
   return (
-    <div>
-      <button
-        className="startAlgoButton"
-        onClick={() => launchAlgorithm(grid)}
-        disabled={!canClick}
-      >
-        Launch algorithm
-      </button>
-      <button
-        className="resetButton"
-        onClick={() => fillGridWith(0)}
-        disabled={!canClick}
-      >
-        Reset
-      </button>
-      <button
-        className="fillButton"
-        onClick={() => fillGridWith(1)}
-        disabled={!canClick}
-      >
-        Fill
-      </button>
-      {false && (
-        <input
-          type="number"
-          value={speed}
-          onChange={(e) =>
-            setSpeed(Math.max(MIN_SPEED, parseInt(e.target.value)))
-          }
-        />
-      )}
+    <div className="gridContainer">
+      <div className="gridBox">
+        {false && (
+          <input
+            type="number"
+            value={speed}
+            onChange={(e) =>
+              setSpeed(Math.max(MIN_SPEED, parseInt(e.target.value)))
+            }
+          />
+        )}
 
-      <div className="minutes">Minutes: {iteration}</div>
-      {grid.map((row, i) => {
-        return (
-          <div key={i} style={{ display: "flex", flexDirection: "row" }}>
-            {row.map((col, j) => (
-              <Cell
-                key={j}
-                id={i + " " + j}
-                val={grid[i][j]}
-                onClick={() => toggleOrange(i, j)}
-              />
-            ))}
-          </div>
-        );
-      })}
+        <div className="minutes">Minutes: {iteration}</div>
+        {grid.map((row, i) => {
+          return (
+            <div key={i} style={{ display: "flex", flexDirection: "row" }}>
+              {row.map((col, j) => (
+                <Cell
+                  key={j}
+                  id={i + " " + j}
+                  val={grid[i][j]}
+                  onClick={() => toggleOrange(i, j)}
+                />
+              ))}
+            </div>
+          );
+        })}
+        <button
+          className="button"
+          onClick={() => launchAlgorithm(grid)}
+          disabled={!canClick}
+        >
+          Launch algorithm
+        </button>
+        <button
+          className="button"
+          onClick={() => fillGridWith(0)}
+          disabled={!canClick}
+        >
+          Reset
+        </button>
+        <button
+          className="button"
+          onClick={() => fillGridWith(1)}
+          disabled={!canClick}
+        >
+          Fill
+        </button>
+      </div>
     </div>
   );
 };

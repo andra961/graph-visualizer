@@ -1,0 +1,12 @@
+.descriptionContainer {
+  border-right: 1px solid lightgrey;
+  padding: 20px;
+  flex: 1;
+  overflow-y: scroll;
+}
+
+@media screen and (max-width: 500px) {
+  .descriptionContainer {
+    border-bottom: 1px solid lightgrey;
+  }
+}
